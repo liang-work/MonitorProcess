@@ -1,0 +1,32 @@
+2025-06-14 15:58:42,331 - INFO - 程序启动，日志系统初始化完成
+2025-06-14 16:01:37,605 - INFO - 程序启动，日志系统初始化完成
+2025-06-14 16:01:46,532 - CRITICAL - 程序发生未捕获异常: Traceback (most recent call last):
+  File "d:\desktop\jianshiqi\ui.py", line 178, in update_process_list
+    self.set_item_color(item, 3, proc.get('cpu', 0), [70, 30])
+TypeError: ProcessMonitor.set_item_color() takes 4 positional arguments but 5 were given
+
+2025-06-14 16:04:29,062 - INFO - 程序启动，日志系统初始化完成
+2025-06-14 16:04:56,741 - CRITICAL - 程序发生未捕获异常: Traceback (most recent call last):
+  File "d:\desktop\jianshiqi\ui.py", line 303, in show_settings
+    dialog = SettingsDialog(self.settings, self)
+             ^^^^^^^^^^^^^^
+NameError: name 'SettingsDialog' is not defined
+
+2025-06-14 16:04:58,129 - CRITICAL - 程序发生未捕获异常: Traceback (most recent call last):
+  File "d:\desktop\jianshiqi\ui.py", line 180, in update_process_list
+    self.set_item_color(item, float(proc.get('memory', 0)/1024/1024), [1024, 512])  # 内存(MB)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\desktop\jianshiqi\ui.py", line 268, in set_item_color
+    item.setBackground(QColor(255, 255, 200))  # 超过注意阈值 - 黄色
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: setBackground expected 2 arguments, got 1
+
+2025-06-14 16:08:08,367 - INFO - 程序启动，日志系统初始化完成
+2025-06-14 16:10:39,120 - CRITICAL - 程序发生未捕获异常: Traceback (most recent call last):
+  File "d:\desktop\jianshiqi\ui.py", line 364, in start_monitoring
+    self.worker.set_monitored(self.monitored_pids)
+  File "d:\desktop\jianshiqi\ui.py", line 513, in set_monitored
+    self.monitored_pids = pids[:MAX_MONITOR_PROCESSES]
+                          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'set' object is not subscriptable
+
